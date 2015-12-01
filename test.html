@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf8">
+<script src="jquery-1.10.2.js" type="text/javascript"></script>
+<script src="poem.js" type="text/javascript"></script>
+<script src="base.js" type="text/javascript"></script>
+<script src="test.js" type="text/javascript"></script>
+<style>
+.inlineBlock {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.border4 {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.poemContainer {
+  width: 300px;
+}
+
+.poemContainer, .poemHeader, .poemBody {
+  padding: 5px;
+  text-align:center;
+}
+
+.poemBody {
+  margin-top: 5px;
+}
+
+.poemImage >img {
+  max-width: 50px;
+  max-height: 50px;
+}
+</style>
+</head>
+<body>
+  <div id="poem">
+    <p>
+      锄禾日当午，
+      <br />
+      汗滴禾下土，
+      <br />
+      谁知盘中餐，
+      <br />
+      粒粒皆辛苦。
+      <br />
+    </p>
+  </div>
+
+
+
+  <!-- template -->
+  <script type="text/template" id="poemTemplate">
+  <div class="poemContainer border4">
+    <div class="poemHeader border4">
+      <div class="poemImage inlineBlock">
+        <img src="{0}.png"/>
+      </div>
+      <div class="poemTitle inlineBlock">{1}</div>
+    </div>
+    <div class="poemBody border4"></div>
+  </div>
+</script>
+
+</body>
+</html>
